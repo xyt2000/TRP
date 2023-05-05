@@ -1,0 +1,4 @@
+1 提取CEDD特征可以选择直接执行jar包 CEDD特征输出到output目录下
+2 如果引入新的数据集，请针对Lire包中
+Lire-1.0b4\src\main\java\net\semanticmetadata\lire\CEDDTest.java
+进行修改。
