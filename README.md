@@ -86,3 +86,18 @@
     │  │  feature_topic_lda.py lda特征提取
     │  │  feature_topic_lsi.py lsi特征提取
     │  │  feature_word2vec.py word2vec特征提取
+## 使用方法
+step1: 预处理
+data_process/RapidOCR/python/OCR.py
+data_process/text_processing.py
+step2: 文本特征提取并基于单一文本特征进行报告排序
+pipeline/text_pipeline.py
+step3: 图像特征提取并基于单一图像特征进行报告排序
+pipeline/image_pipeline.py
+step4: 选择特征融合方式融合特征进行报告排序
+pipeline/earlyfusion_ae.py
+pipeline/earlyfusion_pca.py
+pipeline/earlyfusion_sim.py
+pipeline/latefusion_pipeline.py
+step5:评估排序效果
+evaluate/draw.py 评估排序效果，绘制相应图像
