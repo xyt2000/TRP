@@ -122,15 +122,15 @@ if __name__ == "__main__":
                        text = text.replace(word+" ", '')
                use_texts.append(text)
            # print(use_texts)
-           path = "E:\TRP\output\\" + str(num) + "\\" + "_text.txt"
+           path = "..\output\\" + str(num) + "\\" + "_text.txt"
            f = open(path, "w", encoding="utf-8")
            for i in range(len(use_texts)):
                f.write(use_texts[i] + "\n", )
            f.close()
            """
-    # 报告中文字的预处理
+    # 报告图片中文字的预处理
     for num in range(1,21):
-        path = "../../output"
+        path = "../output"
         image_text_path = path + "/" + str(num) + "/" + "text.txt" # 图中提取的文字
         #image_text_path = path + "/" + str(num) + "/" + "text.txt" # 报告提取的文字
         f = open(image_text_path,"r",encoding="utf-8")
@@ -147,7 +147,7 @@ if __name__ == "__main__":
                     text = text.replace(word+" ", '')
             use_texts.append(text)
         # print(use_texts)
-        path = "E:\TRP\output\\" + str(num) + "\\" + "use_text.txt"
+        path = "..\\output" + str(num) + "\\" + "use_text.txt"
         f = open(path, "w", encoding="utf-8")
         for i in range(len(use_texts)):
             f.write(use_texts[i] + "\n", )

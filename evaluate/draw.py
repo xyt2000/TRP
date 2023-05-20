@@ -5,6 +5,7 @@
 
 """
 文件说明：
+这里给出app1和app13的示例
 """
 import matplotlib.pyplot as plt
 import numpy as np
@@ -16,7 +17,7 @@ from evaluate.apfd import get_apfd, get_apfd_items, get_apfd_items1
 from pipeline.earlyfusion_sim import sim_cat
 from prioritization.art import art_sim_matrix_new, art_sim_matrix
 from text_feature.distance import get_distance_cos
-# epoch,acc,loss,val_acc,val_loss
+#
 test13 = ["bert", "word2vec", "ocr_tfidf", "tfidf", "gist_res", "CEDD_RES", "spm_RES"]
 app_path = "../data/reports/" + str(1) + "/" + "app" + str(1) + ".csv"
 sim_matrix = sim_cat(test13, 1)

@@ -228,7 +228,7 @@ for num in range(1, 21):
     y6 = x6
     y7 = x7
     encoded = 0
-    for epoch in range(1000):
+    for epoch in range(2000):
         encoded, decoded1, decoded2,decoded3, decoded4,decoded5, decoded6,decoded7 = autoencoder(x1, x2, x3, x4, x5, x6, x7)
         loss = loss_func(decoded1, y1) + loss_func(decoded2, y2) + loss_func(decoded3, y3)
         loss_func(decoded4, y4) + loss_func(decoded5, y5)+loss_func(decoded6, y6) + loss_func(decoded7, y7)
@@ -239,4 +239,4 @@ for num in range(1, 21):
         optimizer.step()
         print(loss)
     matrix = encoded.tolist()
-    write_path("fillzeroAE", "ae_7_new", num, matrix)
+    write_path("fillzeroAE", "ae_7", num, matrix)

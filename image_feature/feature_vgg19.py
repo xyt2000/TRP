@@ -27,7 +27,7 @@ def get_distance_cos(vec1, vec2):
     dist = np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
     return dist
 
-cur_path = "E:\TRP\data"
+cur_path = "..\\data"
 if __name__ == "__main__":
     for num in range(1, 21):
         print(num)
@@ -62,7 +62,7 @@ if __name__ == "__main__":
                 vgg_matrix.append(np.array(image_feature_1000.tolist()))
             except:
                 vgg_matrix.append(np.zeros(4096))
-        path = "E:\TRP\output\\" + str(num) + "\\" + "vgg19.txt"
+        path = "..\\output\\" + str(num) + "\\" + "vgg19.txt"
         f = open(path, "w")
         for i in range(length):
             f.write(str(vgg_matrix[i].tolist()) + "\n")
@@ -78,7 +78,7 @@ if __name__ == "__main__":
                     print(str(i)+"," + str(j))
             print(matrix[i])
 
-        path = "E:\TRP\output\\" + str(num)+ "\\" + "vgg19_res.txt"
+        path = "..\\output\\" + str(num)+ "\\" + "vgg19_res.txt"
         f = open(path, "w")
         for i in range(length):
             f.write(str(matrix[i])+"\n")

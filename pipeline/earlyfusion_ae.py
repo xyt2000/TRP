@@ -36,8 +36,8 @@ def read_matrix(path1):
             sim_res[i][j] = get_distance_cos(vec1, vec2)
             sim_res[j][i] = sim_res[i][j]
     return sim_res
-#solutions = ["gist", "cedd", "color", "sift", "surf", "orb", "ssim", "ocr"],"ae_7_new"
-solutions = ["ae_7_word+spm"]
+
+solutions = ["ae_7"]
 for num in range(1,21):
     #print(num)
     apfd_sum = []

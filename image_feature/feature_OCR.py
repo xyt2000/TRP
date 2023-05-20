@@ -18,7 +18,7 @@ for num in range(1,21):
     f = open(word_path, "r")
     lines = len(f.readlines())
     sim_matrix = tfidf(word_path)
-    path = "E:\TRP\output" + "\\" + str(num) + "\\" + "ocr_tfidf" + ".txt"
+    path = "..\\output" + "\\" + str(num) + "\\" + "ocr_tfidf" + ".txt"
     if len(sim_matrix) != 0:
         f = open(path, "w")
         for line in sim_matrix:

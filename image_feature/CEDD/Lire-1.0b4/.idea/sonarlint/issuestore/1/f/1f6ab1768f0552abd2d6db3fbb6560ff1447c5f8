@@ -1,0 +1,22 @@
+
+E
+java:S3740G"/Provide the parametrized type for this generic.(«²Á
+J
+java:S3740L"/Provide the parametrized type for this generic.(éš¶şÿÿÿÿ
+u
+java:S1450I"ZRemove the "tempFeature" field and declare it as a local variable in the relevant methods.(Ş“ÜÚşÿÿÿÿ
+m
+java:S3776V"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(–É¼¡üÿÿÿÿ
+M
+java:S1854‡"6Remove this useless assignment to local variable "ms".(Ğ–Áö
+M	java:S106"9Replace this use of System.out or System.err by a logger.(‰½ßM
+8
+java:S1116€"Remove this empty statement.(Åñ­õşÿÿÿÿ
+o
+java:S2293Y"YReplace the type specification in this constructor call with the diamond operator ("<>").(À×Ë„
+u
+java:S2293“"YReplace the type specification in this constructor call with the diamond operator ("<>").(œ—ïúÿÿÿÿ
+p
+java:S2293¢"YReplace the type specification in this constructor call with the diamond operator ("<>").(’Í­î
+U
+java:S2259h"?A "NullPointerException" could be thrown; "d" is nullable here.(Åù·É

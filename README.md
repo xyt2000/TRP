@@ -88,21 +88,40 @@
     │  │  feature_word2vec.py word2vec特征提取
 ## 使用方法
 
-step1: 预处理
+**step1: 预处理**
 
-data_process/RapidOCR/python/OCR.py
+data_process/RapidOCR/python/OCR.py 
+
+提取报告中图片的文字信息：
+
+    输入：data/reports
+    
+    输出：output/
 
 data_process/text_processing.py
 
-step2: 文本特征提取并基于单一文本特征进行报告排序
+预处理报告的文字信息（文字描述+图片的文字信息）
+
+    文字描述      输入：data/reports
+                 输出：data/reports
+    图片的文字信息 输入：data/reports
+                 输出：output/
+
+**step2: 文本特征提取并基于单一文本特征进行报告排序(RQ1)**
 
 pipeline/text_pipeline.py
 
-step3: 图像特征提取并基于单一图像特征进行报告排序
+（注意提取BERT特征需要下载chinese_L-12_H-768_A-12并放到model文件夹下
+运行bert-serving-start -model_dir 模型地址 -num_worker=1）
 
-pipeline/image_pipeline.py
+**step3: 图像特征提取并基于单一图像特征进行报告排序(RQ1)**
 
-step4: 选择特征融合方式融合特征进行报告排序
+pipeline/image_pipeline.py（注意该文件直接是根据特征进行报告排序 特征提取参考image_feature的readme）
+
+**step4: 选择特征融合方式融合特征进行报告排序(RQ2 & RQ3)**
+
+注意所有的前端融合均是使用已有的数据，前后端融合部分的实现代码可见fusion/early 和 fusion/late
+其中基于深度波尔茨曼机的融合在fusion/early/dbm-master，因为表现不稳定 本文未使用该方法。
 
 pipeline/earlyfusion_ae.py
 
@@ -112,6 +131,6 @@ pipeline/earlyfusion_sim.py
 
 pipeline/latefusion_pipeline.py
 
-step5:评估排序效果
+**step5:评估排序效果**
 
 evaluate/draw.py 评估排序效果，绘制相应图像

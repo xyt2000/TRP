@@ -63,7 +63,7 @@ def my_word2vec(path, model_path):
     # print(model.get_latest_training_loss())
     # model.save('data.model')
     # 保存模型
-    model = Word2Vec.load('E:\TRP\\text_feature\\'+model_path)
+    model = Word2Vec.load(model_path)
   #  for val in model.wv.similar_by_word("打开", topn=10):
    #     print(val[0], val[1])
     vecs = []

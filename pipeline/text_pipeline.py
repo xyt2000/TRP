@@ -61,6 +61,7 @@ for num in range(1,21):
                             apfd_item.append(sequence.index(report))
                             full_category.remove(category)
                     apfd = 1 + 1 / (2 * len(result[0])) - sum(apfd_item) / (len(set(result[1])) * len(result[0]))
+                    return apfd
                 word_path = "../data/reports/"+str(num)+"/"+str(num)+"_"+type+".txt"
                 f = open(word_path,"r")
                 lines = len(f.readlines())
@@ -85,10 +86,11 @@ for num in range(1,21):
                         sim_matrix = gensim_bm25(word_path)
                     elif algorithm == "lsi":
                         sim_matrix = lsi(word_path)
-
                     elif algorithm == "lda_pro_spectrum":
                         sim_matrix = lda_pro_paper(word_path,lines//5+2)
                     elif algorithm == "bert":
+                        # 先命令行启动服务
+                        # bert-serving-start -model_dir ..\model\chinese_L-12_H-768_A-12 -num_worker=1
                         sim_matrix = bert(word_path)
                     elif algorithm == "word2vec":
                         sim_matrix = my_word2vec(word_path,"data.model")

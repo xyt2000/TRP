@@ -11,7 +11,7 @@ def get_distance_cos(vec1, vec2):
     dist = np.dot(vec1, vec2) / (np.linalg.norm(vec1) * np.linalg.norm(vec2))
     return dist
 
-cur_path = "E:\TRP\data"
+cur_path = "..\\..\\data"
 if __name__ == "__main__":
     for num in range(20, 21):
         print(num)
@@ -35,7 +35,7 @@ if __name__ == "__main__":
                 gist_matrix.append(np_gist[0])
             except:
                 gist_matrix.append(np.zeros(256))
-        path = "E:\TRP\output\\" + str(num) + "\\" + "gist.txt"
+        path = "..\\..\\output\\" + str(num) + "\\" + "gist.txt"
         f = open(path, "w")
         for i in range(length):
             f.write(str(gist_matrix[i].tolist()) + "\n")

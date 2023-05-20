@@ -48,7 +48,7 @@ def get_ssim(path1, path2):
 
 get_ssim("E:\TRP\data\\reports\\1\images\\424.png","E:\TRP\data\\reports\\1\images\\426.png")
 
-cur_path = "E:\TRP\data"
+cur_path = "..\\data"
 if __name__ == "__main__":
     for num in range(1, 21):
         print(num)
@@ -77,7 +77,7 @@ if __name__ == "__main__":
                     matrix[i][j] = -1
                     print(str(i)+"," + str(j))
             print(matrix[i])
-        path = "E:\TRP\output\\" + str(num)+ "\\" + "ssim.txt"
+        path = "..\\output\\" + str(num)+ "\\" + "ssim.txt"
         f = open(path, "w")
         for i in range(length):
             f.write(str(matrix[i])+"\n")

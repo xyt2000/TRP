@@ -39,6 +39,6 @@ if __name__ == "__main__":
         for num in range(1,21):
             app_path = "../data/reports/" + str(num) + "/" + "app" + str(num) + ".csv"
             sequence = average(test13,1)#平均排序
-            sequence = dicts(test13,1)#字典序排序
+            sequence = dicts(test13,1)#字典序排序挑选即可
             apfd = get_apfd(app_path, sequence)
             print(apfd)

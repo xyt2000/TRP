@@ -22,12 +22,13 @@ rapid_ocr = RapidOCR()
 
 
 
-cur_path = "E:\TRP\data"
+#cur_path = "E:\TRP\data"
+cur_path = "..\\..\\..\\data"
 if __name__ == "__main__":
     for num in range(1, 21):
         texts = []
         print(num)
-        file_path = "\\reports\\"+ str(num) + "\\" + "app" + str(num)+".csv"
+        file_path = "\\reports\\" + str(num) + "\\" + "app" + str(num)+".csv"
         path = cur_path + file_path
         reports = pd.read_csv(path)
         number = list(reports['index'])
@@ -46,7 +47,7 @@ if __name__ == "__main__":
                 res += text[1]
             print(res)
             texts.append(res)
-        path = "E:\TRP\output\\" + str(num) + "\\" + "text.txt"
+        path = "..\\..\\..\\output\\" + str(num) + "\\" + "text.txt"
         f = open(path, "w",encoding="utf-8")
         for i in range(length):
             f.write(texts[i] + "\n",)
