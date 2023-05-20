@@ -111,17 +111,15 @@ data_process/text_processing.py
 
 pipeline/text_pipeline.py
 
-（注意提取BERT特征需要下载chinese_L-12_H-768_A-12并放到model文件夹下
-运行bert-serving-start -model_dir 模型地址 -num_worker=1）
+（注意提取BERT特征需要下载chinese_L-12_H-768_A-12并放到model文件夹下）
+运行
+    bert-serving-start -model_dir 模型地址 -num_worker=1
 
 **step3: 图像特征提取并基于单一图像特征进行报告排序(RQ1)**
 
 pipeline/image_pipeline.py（注意该文件直接是根据特征进行报告排序 特征提取参考image_feature的readme）
 
 **step4: 选择特征融合方式融合特征进行报告排序(RQ2 & RQ3)**
-
-注意所有的前端融合均是使用已有的数据，前后端融合部分的实现代码可见fusion/early 和 fusion/late
-其中基于深度波尔茨曼机的融合在fusion/early/dbm-master，因为表现不稳定 本文未使用该方法。
 
 pipeline/earlyfusion_ae.py
 
@@ -130,6 +128,9 @@ pipeline/earlyfusion_pca.py
 pipeline/earlyfusion_sim.py
 
 pipeline/latefusion_pipeline.py
+
+注意这里的前端融合均是使用已有的数据，前后端融合部分的实现代码可见fusion/early 和 fusion/late
+其中基于深度波尔茨曼机的融合在fusion/early/dbm-master，因为表现不稳定 本文未使用该方法。
 
 **step5:评估排序效果**
 
